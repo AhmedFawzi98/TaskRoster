@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Page & surfaces */
+    --bg-page: #060b18;
+    --bg-surface: #0f172a;
+
+    /* Accents (header / primary UI) */
+    --bg-accent: #1e3a8a;
+    --bg-accent-2: #2563eb;
+    --bg-accent-soft: #22d3ee;
+
+    /* Text */
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+
+    /* Borders & shadows */
+    --border-soft: #1e293b;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+}
+
+body {
+    background: radial-gradient(circle at top, var(--bg-surface), var(--bg-page));
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
