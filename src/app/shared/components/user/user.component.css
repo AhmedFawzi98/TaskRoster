@@ -1,7 +1,11 @@
 div {
     border-radius: 6px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-user);
     overflow: hidden;
+}
+
+div:hover {
+    box-shadow: var(--shadow-user-hover );
 }
 
 button {
@@ -30,7 +34,7 @@ img {
     width: 2rem;
     object-fit: contain;
     border-radius: 50%;
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--shadow-img);
 }
 
 span {

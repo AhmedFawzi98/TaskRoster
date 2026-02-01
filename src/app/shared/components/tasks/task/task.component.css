@@ -1,0 +1,33 @@
+article {
+    padding: 1rem;
+    color: var(--text-primary);
+    background-color: var(--bg-surface);
+}
+
+time {
+    color: var(--bg-accent-soft);
+}
+
+.actions {
+    text-align: right;
+}
+
+.actions button {
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: var(--bg-accent-2);
+    color: var(--text-primary);
+    border-radius: 4px;
+    border: none;
+    padding: 0.35rem 0.8rem;
+    box-shadow: var(--shadow-button);
+    transition: all 0.3s ease;
+}
+
+.actions button:hover,
+.actions button:active {
+    background-color: var(--bg-accent-soft);
+    box-shadow: var(--shadow-button-hover);
+    color: var(--bg-surface);
+}
