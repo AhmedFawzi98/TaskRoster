@@ -86,6 +86,10 @@ The UI consists of:
 ```
 npm install
 ```
+#### and if using **master-with-modules** branch, also install the following dependency as it's required for angular modules bootsrapping:
+```
+npm install @angular/platform-browser-dynamic@21.0.8
+```
 ### Run the application
 ``` 
 ng serve 
