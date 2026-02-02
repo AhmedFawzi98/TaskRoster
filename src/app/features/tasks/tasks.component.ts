@@ -3,14 +3,17 @@ import { TaskComponent } from './task/task.component';
 import { User } from '../users/models/user.model';
 import { DUMMY_TASKS } from '../../shared/static/dummy-tasks';
 import { Task } from './models/task.model';
+import { AddTaskComponent } from './add-task/add-task.component';
+import { AddTaskFormValue } from './models/add-task-form-value.model';
 @Component({
     selector: 'app-tasks',
-    imports: [TaskComponent],
+    imports: [TaskComponent, AddTaskComponent],
     templateUrl: './tasks.component.html',
     styleUrl: './tasks.component.css',
 })
 export class TasksComponent {
     @Input({ required: true }) selectedUser!: User;
+    isAddingTask = false;
 
     tasks: Task[] = DUMMY_TASKS.map((t) => ({
         id: t.id,
@@ -31,16 +34,25 @@ export class TasksComponent {
         }
     }
 
-    onAddTask() {
-        const maxTaskId = Number(this.tasks.at(-1)?.id);
-        const addedTask: Task = {
+    onStartAddTask() {
+        this.isAddingTask = true;
+    }
+
+    onCancelAddTask() {
+        this.isAddingTask = false;
+    }
+
+    onAddTask(addedTask: AddTaskFormValue) {
+        const maxTaskId = Number(this.tasks.at(-1)!.id);
+        const task: Task = {
             id: `${maxTaskId + 1}`,
             userId: this.selectedUser.id,
-            title: `title of task #${maxTaskId + 1}`,
-            summary: `summary of task #${maxTaskId + 1}`,
-            dueDate: new Date('2026-02-28'),
+            title: addedTask.title,
+            summary: addedTask.summary,
+            dueDate: new Date(addedTask.dueDate),
         };
 
-        this.tasks.push(addedTask);
+        this.tasks.push(task);
+        this.isAddingTask = false;
     }
 }

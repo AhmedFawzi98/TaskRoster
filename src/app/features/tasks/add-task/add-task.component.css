@@ -1,0 +1,94 @@
+.overlay {
+    background-color: rgba(175, 175, 175, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+
+.modal {
+    width: 90%;
+    max-width: 30rem;
+    background-color: var(--bg-accent);
+    border-radius: 6px;
+    border: none;
+    box-shadow: var(--shadow-modal);
+    overflow: hidden;
+    padding: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+h2 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+}
+
+input,
+textarea {
+    width: 100%;
+    font: inherit;
+    padding: 0.15rem 0.25rem;
+    border-radius: 4px;
+    border: 1px solid var(--bg-accent-2);
+    background-color: var(--bg-accent-offwhite);
+}
+
+.actions {
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25rem;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    border: none;
+    padding: 0.35rem 1.25rem;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+button[type='button'] {
+    color: var(--text-primary);
+}
+
+button[type='button']:hover,
+button[type='button']:active {
+    color: var(--bg-surface);
+}
+
+button[type='submit'] {
+    background-color: var(--bg-accent-2);
+    box-shadow: var(--shadow-button);
+    transition: all 0.3s ease;
+}
+
+button[type='submit']:hover,
+button[type='submit']:active {
+    background-color: var(--bg-accent-soft);
+    box-shadow: var(--shadow-button-hover);
+}
+
+@media (min-width: 768px) {
+    .modal {
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,9 @@
+div {
+    border-radius: 8px;
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+div:hover {
+    box-shadow: var(--shadow-card-hover);
+}

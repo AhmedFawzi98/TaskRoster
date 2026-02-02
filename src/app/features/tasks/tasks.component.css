@@ -48,6 +48,7 @@ ul {
     gap: 1rem;
     max-height: 50vh;
     overflow: auto;
+    padding-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {

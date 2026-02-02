@@ -15,6 +15,8 @@
     --bg-accent: #1e3a8a;
     --bg-accent-2: #2563eb;
     --bg-accent-soft: #22d3ee;
+    --bg-accent-green: #72cd52;
+    --bg-accent-offwhite: #f0f0f0;
 
     /* Text */
     --text-primary: #f8fafc;
@@ -23,11 +25,13 @@
     /* Borders & shadows */
     --border-soft: #1e293b;
 
+    --shadow-modal: 0 1px 6px rgba(0, 0, 0, 0.6);
+
     --shadow-img: 0 10px 30px rgba(0, 0, 0, 0.6);
     --shadow-header: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(59, 130, 246, 0.45);
 
-    --shadow-user: 0 8px 24px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(59, 130, 246, 0.35);
-    --shadow-user-hover: 0 14px 40px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(34, 211, 238, 0.6);
+    --shadow-card: 0 2px 6px -1px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(59, 130, 246, 0.25);
+    --shadow-card-hover: 0 3px 9px -1px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(34, 211, 238, 0.45);
 
     --shadow-button: 0 10px 28px rgba(15, 23, 42, 0.75), 0 0 0 1px rgba(34, 211, 238, 0.45);
     --shadow-button-hover: 0 8px 24px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(34, 211, 238, 0.75);
@@ -40,6 +44,7 @@ html {
 
 body {
     background: radial-gradient(circle at top, var(--bg-surface), var(--bg-page));
+    height: 100%;
 }
 
 .visually-hidden {
@@ -50,4 +55,31 @@ body {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
+}
+
+.custom-scrollbar {
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #3b82f6 transparent;
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 8px 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #3b82f6, #22d3ee);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #60a5fa, #67e8f9);
 }

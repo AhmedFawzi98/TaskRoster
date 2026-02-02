@@ -1,0 +1,25 @@
+<div class="overlay" (click)="onCancelAddTask()"></div>
+<div class="modal">
+    <h2>Add Task</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div>
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" [(ngModel)]="titleInput" />
+        </div>
+
+        <div>
+            <label for="summary">Summary</label>
+            <textarea id="summary" rows="5" name="summary" [(ngModel)]="summaryInput"></textarea>
+        </div>
+
+        <div>
+            <label for="due-date">Due Date</label>
+            <input type="date" id="due-date" name="due-date" [(ngModel)]="dueDateInput" />
+        </div>
+
+        <div class="actions">
+            <button type="button" (click)="onCancelAddTask()">Cancel</button>
+            <button type="submit">Create</button>
+        </div>
+    </form>
+</div>

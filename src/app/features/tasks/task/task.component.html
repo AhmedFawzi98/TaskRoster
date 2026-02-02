@@ -1,8 +1,12 @@
-<article>
-    <h2>{{ task.title }}</h2>
-    <time>{{ task.dueDate.toLocaleDateString() }}</time>
-    <p>{{ task.summary }}</p>
-    <div class="actions">
-        <button (click)="onComplete()">Complete</button>
-    </div>
-</article>
+<app-card>
+    <article>
+        <h2>{{ task.title }}</h2>
+        <time [attr.datetime]="task.dueDate | date: 'yyyy-MM-dd'">{{
+            task.dueDate | date: 'fullDate'
+        }}</time>
+        <p>{{ task.summary }}</p>
+        <div class="actions">
+            <button (click)="onComplete()">Complete</button>
+        </div>
+    </article>
+</app-card>
