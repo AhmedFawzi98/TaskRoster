@@ -8,9 +8,9 @@ import { User } from './features/users/models/user.model';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, HeaderComponent, UserComponent, TasksComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
+    standalone: false,
 })
 export class AppComponenet {
     users: User[] = DUMMY_USERS;
