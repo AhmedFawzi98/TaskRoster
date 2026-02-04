@@ -1,6 +1,6 @@
 # TaskRoster
 
-TaskRoster is a **feature-focused Angular application** for **Task management** built to practice and demonstrate **modern Angular (v16+) concepts**.
+TaskRoster is a **feature-focused Angular application** for **Task management** built to practice and demonstrate **modern Angular (v21+) concepts**.
 
 The application allows selecting a user and managing their tasks, including viewing, adding, and completing tasks, with a predictable data flow and a clean, component-driven UI.
 
